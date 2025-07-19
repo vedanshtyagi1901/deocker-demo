@@ -17,8 +17,8 @@ COPY . .
 # Install Python packages
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Expose port
+# Expose port (Render needs this but real port is passed via ENV)
 EXPOSE 5000
 
-# Run app
+# Start the app
 CMD ["python", "app.py"]
